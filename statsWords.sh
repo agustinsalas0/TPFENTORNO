@@ -6,7 +6,7 @@ TEXTO=$(cat ./texto.txt)
 
 #echo $TEXTO
 #Convertimos el texto en una lista de palabras (separador ' ')
-palabras=(${TEXTO//' '/ })
+palabras=(${TEXTO})
 
 #Inicializamos las variables necesarias para obtener los indicadores estadísticos
 SUMA=0
