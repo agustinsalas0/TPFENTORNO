@@ -10,5 +10,5 @@ COPY ./ /dirdock
 #Indicamos cual es el directorio que vamos a usar dentro del contenedor
 WORKDIR /dirdock
 
-#Ejecutamos el menú
+#Ejecutamos el menú principal
 ENTRYPOINT ["/dirdock/menu.sh"]

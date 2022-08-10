@@ -1,7 +1,7 @@
 
 #! /bin/bash
 
-#Contamos las lìneas que se encuentran vacias con el comando grep opcion c.
-echo "El archivo de texto contiene $(grep -c '^$' ./texto/texto.txt) lineas en blanco"
+
+echo "En el archivo de texto hay $(grep -c '^$' ./texto/texto.txt) lineas en blanco."
 
 exit 1

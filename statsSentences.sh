@@ -1,7 +1,7 @@
 
 #! /bin/bash
 
-#Eliminamos el archivo longitud, ya que en cada corrida acumulamos los resultados. De esta manera, nos asegurarnos que contenga el resultado de la corrida vigente. En caso de no existir el archivo redireccionamos el error de inexistencia al fichero error.
+# para que no quede la informacion de la corrida anterior, elimino el archivo auxiliar longitud.txt, si da error por inexisytencia la salida va hacia error.log
 rm longitud.txt 2>error.log
 
 #Tomamos el texto con el que trabajaremos, reemplazamos cada punto por un salto linea, eliminamos el espacio del inicio con sed 's/^[[:space:]]*//', eliminamos las lìneas en blanco con sed '/^$/d', y por ultimo le agregamos el punto de cada oracion al final.
