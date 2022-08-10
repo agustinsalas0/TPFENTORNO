@@ -19,6 +19,6 @@ INSTRUCCIONES PARA EL PROCESADOR DE TEXTO
 
    El comando a ejecutar es el siguiente:
 		
-	docker run -it -v /ejemplo/generico/directorio/ejemplo-texto.txt:/home/agustin/TPFENTORNO/texto/texto.txt:ro imagentexto
+	docker run -it -v /ejemplo/generico/directorio/ejemplo-texto.txt:/home/agustinsalas/TPFENTORNO/texto/texto.txt:ro imagentexto
 
-5) EL programa ya esta corriendo y listo para usar.
+5) El programa ya esta corriendo y listo para usar.
