@@ -5,7 +5,7 @@
 rm longitud.txt 2>error.log
 
 #Tomamos el texto con el que trabajaremos, reemplazamos cada punto por un salto linea, eliminamos el espacio del inicio con sed 's/^[[:space:]]*//', eliminamos las lìneas en blanco con sed '/^$/d', y por ultimo le agregamos el punto de cada oracion al final.
-cat ./texto.txt | tr '.' '\n' | sed 's/^[[:space:]]*//' | sed '/^$/d' | sed 's/$/./' > oraciones.txt
+cat ./texto/$1 | tr '.' '\n' | sed 's/^[[:space:]]*//' | sed '/^$/d' | sed 's/$/./' > oraciones.txt
 
 #Tomamos el archivo limpio, que contiene en cada linea una oracion. Por medio del comando wc -m obtenemosla longitud de cada oracion, la que se guarda en el archivo longitud.
 while IFS= read -r line
