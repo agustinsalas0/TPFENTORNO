@@ -2,7 +2,7 @@
 #1. statsWords.sh Indicador estadístico de longitud de palabras (la más corta, la más larga y el promedio de longitud).
 
 #Se lee el texto con cat y se almacena en la variable TEXTO
-TEXTO=$(cat ./texto/texto.txt)
+TEXTO=$(cat /home/agustinsalas/TPFENTORNO/texto/texto.txt)
 
 
 #Convertimos el texto en una lista de palabras 
