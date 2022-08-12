@@ -12,7 +12,7 @@
 #  7. sort -r: Ordeno nuevamente el listado de manera descendente
 #  8. head -n 10: Nos quedamos con las primeras 10, por defecto head -n muestras las primeras 10
 
-cat /home/agustinsalas/TPFERNTORNO/texto/texto.txt | tr -d '.,?¡!¿;'| tr '[:upper:]' '[:lower:]' | tr ' ' '\n' | awk 'length > 3' | sort | uniq -c | sort -r | head -n 10 > listadof.txt
+cat /home/agustinsalas/TPFENTORNO/texto/texto.txt | tr -d '.,?¡!¿;'| tr '[:upper:]' '[:lower:]' | tr ' ' '\n' | awk 'length > 3' | sort | uniq -c | sort -r | head -n 10 > listadof.txt
 
 echo "A continuaciòn se muestra el listado ordenado de manera ascendete por frecuencia de las palabras en el texto ingresado"
 echo " Frecuencia Palabra"
