@@ -17,16 +17,16 @@ MAX=$(echo ${#palabras[0]})
 #Recorro la lista con la sentencia FOR:
 for i in "${palabras[@]}"
 do
-        #Eliminamos los caracteres que no pertenecen palabras
+        #Elimino los caracteres que no pertenecen palabras
 	REC=$(echo -n "$i" | sed -e 's/\.//g' -e's/,//g' -e's/\!//g' -e's/;//g' -e's/\¡//g' -e 's/^[[:space:]]//g' -e 's/\?//g' -e 's/\¿//g')
         
-	#Calculamos la longitud de la palabra
+	#Calculo la longitud de la palabra
 	LON=$(echo ${#REC})
         
-	#Actualizamos el valor de las variables
+	#Actualizo el valor de las variables
 	SUMA=$((LON+SUMA))
         CONT=$((CONT+1))
-
+	# Comparo la longitud de la palabra con los valores previos de MIN y MAX
         if [[ $LON -lt $MIN ]]; then MIN=$LON; fi
         if [[ $LON -gt $MAX ]]; then MAX=$LON; fi
 

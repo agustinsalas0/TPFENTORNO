@@ -1,21 +1,20 @@
 
 #!/bin/bash
 
+# Primero leo el archivo de texto con el comando cat, luego proceso el texto a traves de pipe lines, primero elimino los
+# caracteres que no son propios de la palabra, luego convierto todo el texto a minuscula, con tr intercambio los espacios
+# por saltos de lines, asi me queda una palabra por linea, con awk filtro las palabras que solo tengan una long mayor a 3
+# con sort ordeno las palabras de manera alfabetica, luego con uniq filtro las palabras que se rrepiten y con la npocion -c de 
+# este comando me indica la cantidad de ocurrencias de dicha palabra, vuelvo a ordenar la lista de manera descendente y por 
+# ultimo con el comando head selecciono las primeras 10 palabras de la lista
 
-# Por medio de PIPES (|):
-#  tr -d '.,?¡!¿;': con esta opcion elimino los caracteres indicados
-#  2. tr '[:upper:]' '[:lower:]': convierto el texto a minúsculas
-#  3. tr ' ' '\n': agrego un salto de línea en cada espacio para dejar una palabra por línea
-#  4. awk 'length > 3': Filtro las palabras que posean una longitud mayor a 3
-#  5. sort: Ordeno las palabras de manera alfabetica
-#  6. uniq -c: Filtro las que se repiten, la opción -c nos muestra el numero de ocurrencias de la palabra en el archivo.
-#  7. sort -r: Ordeno nuevamente el listado de manera descendente
-#  8. head -n 10: Nos quedamos con las primeras 10, por defecto head -n muestras las primeras 10
 
 cat /home/agustinsalas/TPFENTORNO/texto/texto.txt | tr -d '.,?¡!¿;'| tr '[:upper:]' '[:lower:]' | tr ' ' '\n' | awk 'length > 3' | sort | uniq -c | sort -r | head -n 10 > listadof.txt
 
 echo "A continuaciòn se muestra el listado ordenado de manera ascendete por frecuencia de las palabras en el texto ingresado"
 echo " Frecuencia Palabra"
+
+# Imprimo en pantalla el listado de palabras con su cantidad de ocurrencias correspondientes.
 
 cat listadof.txt
 
